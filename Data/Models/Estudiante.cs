@@ -1,12 +1,15 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace InvestigacionesUTECO.Data.Models;
 
-public class Estudiane
+public class Estudiante
     {        
+        [Key]
         public int Id { get; set; }
-        public string Matricula { get; set; }
-        public string Telefono { get; set; } 
-        public string Correo { get; set; }
-        public string Situacionlaboral { get; set; }
-        public string Trimestre_cursado { get; set; }
-        public string Calificacion { get; set; }
+        public string Matricula { get; set; } = null!;
+        public string Telefono { get; set; }  = null!;
+        public string Correo { get; set; } = null!;
+        public string Situacionlaboral { get; set; } = null!;
+        public string Trimestre_cursado { get; set; } = null!;
+        public string Calificacion { get; set; } = null!;
     }
