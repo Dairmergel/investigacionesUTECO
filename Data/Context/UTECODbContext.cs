@@ -12,6 +12,9 @@ public class UTECODbContext:DbContext,IUTECODbContext
 
     #region  Tablas
     public virtual DbSet<Usuario> Usuarios {get; set;} = null!;
+    public DbSet<Estudiante> Estudiantes { get; set; } = null!;
+    public DbSet<Formulario> Formularios { get; set; } = null!;
+    public DbSet<FormularioSustentante> Sustentantes { get; set; } = null!;
     #endregion
 
     #region Funciones
@@ -30,6 +33,9 @@ public interface IUTECODbContext
 {
     #region  Tablas
     public DbSet<Usuario> Usuarios {get; set;}
+    public DbSet<Estudiante> Estudiantes {get; set;}
+    public DbSet<Formulario> Formularios {get; set;}
+    public DbSet<FormularioSustentante> Sustentantes {get; set;}
 
     #endregion
 

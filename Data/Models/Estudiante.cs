@@ -1,7 +1,8 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace InvestigacionesUTECO.Data.Models;
-
+[Table("Estudiantes")]
 public class Estudiante
     {        
         [Key]
@@ -9,7 +10,4 @@ public class Estudiante
         public string Matricula { get; set; } = null!;
         public string Telefono { get; set; }  = null!;
         public string Correo { get; set; } = null!;
-        public string Situacionlaboral { get; set; } = null!;
-        public string Trimestre_cursado { get; set; } = null!;
-        public string Calificacion { get; set; } = null!;
     }

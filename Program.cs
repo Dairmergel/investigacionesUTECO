@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using InvestigacionesUTECO.Data;
 using InvestigacionesUTECO.Data.Context;
+using InvestigacionesUTECO.Data.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,7 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddSqlite<UTECODbContext>("Data Source=.//Data//Context//UTECO_DB.sqlite");
 //Agregamos los servicios para la base de datos
 builder.Services.AddScoped<IUTECODbContext,UTECODbContext>();
+builder.Services.AddScoped<IUsuarioServices,UsuarioServices>();
 
 builder.Services.AddSingleton<WeatherForecastService>();
 
@@ -43,5 +45,4 @@ using (var scope = scopeFactory.CreateScope())
         
     }
 }
-
 app.Run();

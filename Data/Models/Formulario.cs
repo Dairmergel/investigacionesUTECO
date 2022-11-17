@@ -1,30 +1,35 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace InvestigacionesUTECO.Data.Models;
-
+[Table("Formularios")]
 public class Formulario
     {        
         [Key]
         public int Id { get; set; }
-        public string Unidad_academia { get; set; } = null!;
+        #region   Cabecera
+        public DateTime Fecha { get; set; } = DateTime.Now;
+        public string UnidadAcademia { get; set; } = null!;
         public string Programa { get; set; }  = null!;
         public string Facultad { get; set; } = null!;
-        public string PropuestaId { get; set; } = null!;
-        public string SustentateId { get; set; } = null!;
-        public string Aspecto_inId { get; set; } = null!;
-        public string RemisionDia { get; set; } = null!;
-        public string RemisionMes { get; set; } = null!;
-        public string RemisionAño { get; set; } = null!;
-        public string GraduacionMes { get; set; } = null!;
-        public string GraduacionAño { get; set; } = null!;
+        #endregion
+
+        #region De la Propuesta
+        public string Problema { get; set; } = null!;
+        public string Justificacion { get; set; }  = null!;
+        public string Objetivo { get; set; } = null!;
+        public string TituloPropuesto { get; set; } = null!;
+        public string PreferenciaAsesor { get; set; } = null!;
+        #endregion
+        public int MesGraduacionProyeccion { get; set; }
+        public int AnioGraduacionProyeccion { get; set; }
         public virtual ICollection<FormularioSustentante> Sustentantes {get; set;} = null!;
-
-    }
-
-    public class FormularioSustentante{
-        public int Id {get; set;}
-        public int formularioId {get; set;}
-        public virtual Formulario? formulario {get; set;}
-        public int estudianteId {get; set;}
-        public virtual Estudiante? estudiante {get; set;}
+        #region Aspecto Institucional
+        public string SituacionFinal { get; set; } = null!;
+        public string Asesor { get; set; }  = null!;
+        public string CoAsesor { get; set; } = null!;
+        public string Contenido { get; set; } = null!;
+        public string Metodologia { get; set; } = null!;
+        public string RedaccionOrtografia { get; set; } = null!;
+        #endregion
     }
