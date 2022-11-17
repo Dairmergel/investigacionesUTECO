@@ -118,7 +118,7 @@
   border-bottom-right-radius: 3px;
   
 }
-.forl .thumbnail {
+.forl .thumbnailn {
   background: #3aef58;
   width: 150px;
   height: 150px;
@@ -147,7 +147,7 @@
   width: 100%;
 }
 
-.forl .thumbnail img {
+.forl .thumbnailn img {
   display: block;
   width: 100%;
 }
@@ -189,7 +189,7 @@
   color: #EF3B3A;
   text-decoration: none;
 }
-.forl .register-form {
+.forl .register-fornm {
   display: none;
 }
 
@@ -256,4 +256,110 @@ body:before {
   width: auto;
   height: auto;
   transform: translateX(-50%) translateY(-50%);
+}
+
+.fornm {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 300px;
+  margin: 0 auto 100px;
+  padding: 30px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  text-align: center;
+}
+.fornm .thumbnailn {
+  background: #3aef58;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 30px;
+  padding: 40px 40px;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  box-sizing: border-box;
+}
+.fornm .thumbnailn img {
+  display: block;
+  width: 100%;
+
+}
+.fornm input {
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.fornm button {
+  outline: 0;
+  background: #3aef58;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  color: #FFFFFF;
+  font-size: 14px;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.fornm .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.fornm .message a {
+  color: #EF3B3A;
+  text-decoration: none;
+}
+.fornm .register-fornm {
+  display: none;
+}
+
+.containner {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.containner:before, .containner:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.containner .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.containner .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.containner .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.containner .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.containner .info span .fa {
+  color: #EF3B3A;
 }

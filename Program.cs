@@ -14,7 +14,6 @@ builder.Services.AddSqlite<UTECODbContext>("Data Source=.//Data//Context//UTECO_
 //Agregamos los servicios para la base de datos
 builder.Services.AddScoped<IUTECODbContext,UTECODbContext>();
 builder.Services.AddScoped<IUsuarioServices,UsuarioServices>();
-
 builder.Services.AddSingleton<WeatherForecastService>();
 
 var app = builder.Build();

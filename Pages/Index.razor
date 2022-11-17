@@ -1,9 +1,221 @@
 ﻿@page "/"
+@using Data.Models
 
-<PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uteco</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/estilos.css">
 
-Welcome to your new app.
+    <meta name="theme-color" content="#2091F9">
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+    <meta name="title" content="Universidad Tecnológica Del Cibao Oriental">
+    <meta name="description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alexcgdesign.github.io">
+    <meta property="og:title" content= "Universidad Tecnológica Del Cibao Oriental">
+">
+    <meta property="og:description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+    <meta property="og:image" content="https://alexcgdesign.github.io/images/css.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jordanalex.com/">
+    <meta property="twitter:title" content="Universidad Tecnológica Del Cibao Oriental">
+">
+    <meta property="twitter:description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+    <meta property="twitter:image" content="https://alexcgdesign.github.io/images/css.jpg">
+</head>
+
+<body>
+
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title">UTECO.</h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="https://uteco.edu.do/" class="nav__links">Uteco</a>
+                </li>
+                <li class="nav__items">
+                    <a href="https://uteco.edu.do/conocenos/" class="nav__links">Acerca de</a>
+                </li>
+                <li class="nav__items">
+                    <a href="https://akanuxt.uteco.edu.do/buzonsugerencias/" class="nav__links">Contacto</a>
+                </li>
+                <li class="nav__items">
+                    <a href="https://campusvirtual.uteco.edu.do/" class="nav__links">Campus</a>
+                </li>
+
+                <img src="./images/close.svg" class="nav__close">
+            </ul>
+
+            <div class="nav__menu">
+                <img src="./images/menu.svg" class="nav__img">
+            </div>
+        </nav>
+
+        <section class="hero__container container">
+            <h1 class="hero__title">Formulario de solicitudes para investigaciones tesis</h1>
+            <p class="hero__paragraph"> Hola querido estudiante en esta web podras rellenar el formulario para la solicitudes de investigacion de tesis</p>
+            <a href="https://localhost:7275/login" class="cta">Comienza ahora</a>
+        </section>
+    </header>
+
+    <main>
+        <section class="container about">
+            <h2 class="subtitle">¿Qué debes de saber antes de hacer tu tesis?</h2>
+            <p class="about__paragraph">Primero debes de aver culminado con el tercnico y la licenciatura, una vez comprobado esto en su investigacion debera:</p>
+
+            <div class="about__main">
+                <article class="about__icons">
+                    <img src="./images/shapes.svg" class="about__icon">
+                    <h3 class="about__title">Manejo de diferetes arias</h3>
+                    <p class="about__paragrah">Deberas de poner pratica todo lo ampredido</p>
+                </article>
+
+                <article class="about__icons">
+                    <img src="./images/paint.svg" class="about__icon">
+                    <h3 class="about__title">Imaginacion</h3>
+                    <p class="about__paragrah">La creatividad sera clave para un mejor trabajo asi que deja bolar tu imaginacion</p>
+                </article>
+
+                <article class="about__icons">
+                    <img src="./images/code.svg" class="about__icon">
+                    <h3 class="about__title">Trabajo en equipo</h3>
+                    <p class="about__paragrah">Debes de saber que este trabajo es recomendable hacerlo en equipo para aunmetar la calidad del contenido asi como la feciencia</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="knowledge">
+            <div class="knowledge__container container">
+                <div class="knowledege__texts">
+                    <h2 class="subtitle">En nuestra pagina en la seccion investigaciones podras ver anteriores trabajos de tesis</h2>
+                    <p class="knowledge__paragraph">Es importante el intestigar leer y analizar diferentes trabajos de tesis, por que al analizarlos podras tener un mejor entendiento de de lo que deber de realizar</p>
+                    <a href="https://uteco.edu.do/investigacion/" class="cta">Entra a investigaciones</a>
+                </div>
+
+                <figure class="knowledge__picture">
+                    <img src="./images/macbook.png" class="knowledge__img">
+                </figure>
+            </div>
+        </section>
+
+        
+
+        <section class="testimony">
+            <div class="testimony__container container">
+                <img src="./images/leftarrow.svg" class="testimony__arrow" id="before">
+
+                <section class="testimony__body testimony__body--show" data-id="1">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">Mi nombre es Jordan Alexander, <span class="testimony__course">Graduada de la univercidad de Uteco.</span></h2>
+                        <p class="testimony__review"> Les dare un pequeño consejo Sé creativo y original
+
+Vas a necesitar de estas dos cualidades para poder entregar un trabajo sobresaliente. Es importante que confíes en tu capacidad intelectual y en los conocimientos que has adquirido a través de los años para proponer conexiones valiosas que introduzcan un trabajo de análisis innovador.</p>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src="./images/face.jpg" class="testimony__img">
+                    </figure>
+                </section>
+
+                <section class="testimony__body" data-id="2">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">Mi nombre es Alejandra Perez, <span class="testimony__course">estudiante de
+                                CSS.</span></h2>
+                        <p class="testimony__review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
+                            esse, asperiores eaque laborum veniam laboriosam saepe reiciendis dolorem. Cum, ratione
+                            voluptatum!</p>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src="./images/face2.jpg" class="testimony__img">
+                    </figure>
+                </section>
+
+                <section class="testimony__body" data-id="3">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">Mi nombre es Karen Arteaga, <span class="testimony__course">estudiante de
+                                CSS.</span></h2>
+                        <p class="testimony__review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
+                            esse, niam laboriosam saepe reiciendis dolorem. Cum, ratione voluptatum!</p>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src="./images/face3.jpg" class="testimony__img">
+                    </figure>
+                </section>
+
+                <section class="testimony__body" data-id="4">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">Mi nombre es Kevin Ramirez, <span class="testimony__course">estudiante de
+                                CSS.</span></h2>
+                        <p class="testimony__review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
+                            esse, niam laboriosam saepe reiciendis dolorem. Cum, ratione voluptatum!</p>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src="./images/face4.jpg" class="testimony__img">
+                    </figure>
+                </section>
+
+
+                <img src="./images/rightarrow.svg" class="testimony__arrow" id="next">
+            </div>
+        </section>
+
+        
+    </main>
+
+    <footer class="footer">
+        <section class="footer__container container">
+            <nav class="nav nav--footer">
+                <h2 class="footer__title">Sobre nosotros.</h2>
+
+                <ul class="nav__link nav__link--footer">
+                    <li class="nav__items">
+                        <a href="https://uteco.edu.do/" class="nav__links">Uteco</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="https://uteco.edu.do/conocenos/" class="nav__links">Acerca de</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="https://akanuxt.uteco.edu.do/buzonsugerencias/" class="nav__links">Contacto</a>
+                    </li>
+                     <li class="nav__items">
+                        <a href="https://campusvirtual.uteco.edu.do/" class="nav__links">Campus</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <form class="footer__form" action="https://formspree.io/f/mknkkrkj" method="POST">
+                <h2 class="footer__newsletter">Registrate en nuestra pagina</h2>
+                <div class="footer__inputs">
+                    <input type="submit" value="Aqui" class="footer__submit">
+                </div>
+            </form>
+        </section>
+
+        <section class="footer__copy container">
+            <div class="footer__social">
+                <a href="https://www.facebook.com/utecoRD/" class="footer__icons"><img src="./images/facebook.svg" class="footer__img"></a>
+                <a href="https://twitter.com/utecoRD/" class="footer__icons"><img src="./images/twitter.svg" class="footer__img"></a>
+                <a href="https://www.youtube.com/results?search_query=utecord" class="footer__icons"><img src="./images/youtube.svg" class="footer__img"></a>
+            </div>
+
+            
+        </section>
+    </footer>
+</body>
