@@ -5,6 +5,10 @@ namespace InvestigacionesUTECO.Data.Models;
 [Table("Formularios")]
 public class Formulario
     {        
+        public Formulario()
+        {
+            Sustentantes = new List<FormularioSustentante>();
+        }
         [Key]
         public int Id { get; set; }
         #region   Cabecera

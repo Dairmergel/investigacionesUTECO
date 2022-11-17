@@ -4,50 +4,68 @@
 <div class="containe">
   <div class="info">
     <div class="for">
-      <div class="thumbnai"><img src="img/logo_uteco.png"/></div>
+      <div class="thumbnai"><img src="img/logo_uteco.png" /></div>
+    </div>
   </div>
-</div>
 </div>
 
 <div class="forl">
-  <form class="login-form">
-        <table>
-          <table>
-    <h1>Fecha de Remision del Titulo</h1>                    
-    <th ><input type="text" placeholder="Dia"/></th>
-    <th ><input type="text" placeholder="Mes"/></th>
-    <th ><input type="text" placeholder="Año"/></th>
-  </table>
-  <table>
-    <h1>Proyecto de graduacion</h1>                    
-    <th ><input type="text" placeholder="Unidad Academica"/></th>
-    <th ><input type="text" placeholder="Mes"/></th>
-    <th ><input type="text" placeholder="Año"/></th>
-  </table>
-    <h1>Programa</h1>
-    <input type="text" placeholder="Aqui escriba el nombre de la carrera"/> 
-    <h1>Facultad que pertenece</h1>
-    <input type="password" placeholder="Aqui escriba el nombre de la Facultad"/>
-    <h1>Justificacion</h1>
-    <input type="text" placeholder="Desglose los elementos del por que hacer la investigacion y que beneficios aportara, uso y aplicacion de los resultados"/>
-    <h1>Objetivo</h1>
-    <input type="password" placeholder="Expresar de forma clara las orientaciones u objetivos que tendras su investigacion, de forma general"/>
-    <h1>Titulo propuesto</h1>
-    <input type="text" placeholder="Describir su titulo de insvestigacion, no superar las 15 palabras"/> 
-    <h1>Preferencia de Asesor (a)</h1>
-    <input type="password" placeholder="Escriba el Nombre de la Preferencia del profesor (a) para Asesor (a) del trabajo de Grado "/>
-    <h1>Nombre de los Sustentantes</h1>
+  <div class="login-form">
     <table>
-      <th ><input type="text" placeholder="Matricula"/></th>
-      <th ><input type="text" placeholder="Telefono"/></th>
-      <th ><input type="text" placeholder="Correo eletronico"/></th>
-      <th ><input type="text" placeholder="Situacion laboral"/></th>
-      <th ><input type="text" placeholder="Trimestre que curso"/></th>
-      <th ><input type="text" placeholder="Calificion alcanzada"/></th>
-  </table>
-  </table>
+
+      <table>
+        <h1>Proyecto de graduacion</h1>
+        <th><input @bind="Formulario.UnidadAcademia" type="text" placeholder="Unidad Academica" /></th>
+        <th><input @bind="Formulario.MesGraduacionProyeccion" type="number" max="12" min="1" placeholder="Mes" /></th>
+        <th><input @bind="Formulario.AnioGraduacionProyeccion" type="number" placeholder="Año" /></th>
+      </table>
+      <h1>Programa</h1>
+      <input @bind="Formulario.Programa" type="text" placeholder="Aqui escriba el nombre de la carrera" />
+      <h1>Facultad que pertenece</h1>
+      <input @bind="Formulario.Facultad" type="text" placeholder="Aqui escriba el nombre de la Facultad" />
+      <h1>Justificacion</h1>
+      <input @bind="Formulario.Justificacion" type="text"
+        placeholder="Desglose los elementos del por que hacer la investigacion y que beneficios aportara, uso y aplicacion de los resultados" />
+      <h1>Objetivo</h1>
+      <input @bind="Formulario.Objetivo" type="text"
+        placeholder="Expresar de forma clara las orientaciones u objetivos que tendras su investigacion, de forma general" />
+      <h1>Titulo propuesto</h1>
+      <input @bind="Formulario.TituloPropuesto" type="text" placeholder="Describir su titulo de insvestigacion, no superar las 15 palabras" />
+      <h1>Preferencia de Asesor (a)</h1>
+      <input @bind="Formulario.Asesor" type="text"
+        placeholder="Escriba el Nombre de la Preferencia del profesor (a) para Asesor (a) del trabajo de Grado " />
+      <h1>Nombre de los Sustentantes</h1>
+      <div class="mt-3">
+        <a class="btn btn-info" @onclick="()=>Formulario.Sustentantes.Add(new())">Agregar</a>
+      </div>
+      <table>
+        <thead>
+          <th>Matricula</th>
+          <th>Telefono</th>
+          <th>Correo eletronico</th>
+          <th>Situacion laboral</th>
+          <th>Trimestre que curso</th>
+          <th>Calificion alcanzada</th>
+        </thead>
+        <tbody>
+
+          @foreach (var sustentante in Formulario.Sustentantes)
+          {
+            <tr>
+              <th><input @bind="sustentante!.estudiante!.Matricula" type="text" placeholder="Matricula" /></th>
+              <th><input @bind="sustentante!.estudiante!.Telefono" type="text" placeholder="Telefono" /></th>
+              <th><input @bind="sustentante!.estudiante!.Correo" type="text" placeholder="Correo eletronico" /></th>
+              <th><input @bind="sustentante!.Situacionlaboral" type="text" placeholder="Situacion laboral" /></th>
+              <th><input @bind="sustentante!.Trimestre_cursado" type="text" placeholder="Trimestre que curso" /></th>
+              <th><input @bind="sustentante!.Calificacion" type="number" placeholder="Calificion alcanzada" /></th>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </table>
     <button>Enviar</button>
-  </form>
+  </div>
 </div>
-
-
+@code {
+  public Formulario Formulario { get; set; } = new Formulario();
+}
