@@ -63,9 +63,13 @@
         </tbody>
       </table>
     </table>
-    <button>Enviar</button>
+    <button @onclick="Crear">Enviar</button>
   </div>
 </div>
 @code {
   public Formulario Formulario { get; set; } = new Formulario();
+async void Crear(){
+    var r = await FomularioSevices.Crear(Formulario);
+    if(r) Formulario = new Formulario ();
+  }
 }
