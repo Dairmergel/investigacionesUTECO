@@ -12,9 +12,8 @@
 <div class="forl">
   <div class="login-form">
     <table>
-
+      <h1>Proyecto de graduacion</h1>
       <table>
-        <h1>Proyecto de graduacion</h1>
         <th><input @bind="Formulario.UnidadAcademia" type="text" placeholder="Unidad Academica" /></th>
         <th><input @bind="Formulario.MesGraduacionProyeccion" type="number" max="12" min="1" placeholder="Mes" /></th>
         <th><input @bind="Formulario.AnioGraduacionProyeccion" type="number" placeholder="Año" /></th>
@@ -67,8 +66,8 @@
   </div>
 </div>
 @code {
-  public Formulario Formulario  { get; set; } = new Formulario();
-  
+  public Formulario Formulario { get; set; } = new Formulario();
+
     async void Crear(){
     var r = await FomularioSevices.Crear(Formulario);
     if(r) Formulario = new Formulario ();
