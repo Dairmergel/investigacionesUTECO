@@ -22,7 +22,7 @@
   </div>
   </EditForm>
 @code {
-  Usuario Usuario = new Usuario ();
+  Usuario Usuario { get; set; } = new Usuario ();
 
   async void Crear(){
     var r = await UsuarioServices.Crear(Usuario);
