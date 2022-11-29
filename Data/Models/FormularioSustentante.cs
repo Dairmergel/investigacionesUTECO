@@ -13,7 +13,9 @@ namespace InvestigacionesUTECO.Data.Models;
         public int estudianteId {get; set;}
         public virtual Estudiante? estudiante {get; set;} = new Estudiante();
         
-        public string Situacionlaboral { get; set; } = null!;
-        public string Trimestre_cursado { get; set; } = null!;
-        public int Calificacion { get; set; }
+        public string? Situacionlaboral { get; set; } = null!;
+        public string? Trimestre_cursado { get; set; } = null!;
+        public int? Calificacion { get; set; }
+
+        
     }

@@ -1,35 +1,29 @@
-/* Form */
+/* Formp */
 
-.form {
-  position: relative;
-  z-index: 1;
-  background: #FFFFFF;
-  max-width: 300px;
-  margin: 0 auto 100px;
-  padding: 30px;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-  text-align: center;
-}
-.form .thumbnail {
+
+
+.for {
   background: #3aef58;
   width: 150px;
   height: 150px;
   margin: 0 auto 30px;
-  padding: 50px 30px;
+  padding: 30px 30px;
   border-top-left-radius: 100%;
   border-top-right-radius: 100%;
   border-bottom-left-radius: 100%;
   border-bottom-right-radius: 100%;
   box-sizing: border-box;
 }
-.form .thumbnail img {
+.for .thumbnai img {
   display: block;
   width: 100%;
 }
-.form input {
+
+.forl .thumbnailn img {
+  display: block;
+  width: 100%;
+}
+.forl input {
   outline: 0;
   background: #f2f2f2;
   width: 100%;
@@ -43,7 +37,116 @@
   box-sizing: border-box;
   font-size: 14px;
 }
-.form button {
+.forl button {
+  outline: 0;
+  background: #5eef3a;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  color: #FFFFFF;
+  font-size: 14px;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.forl .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.forl .message a {
+  color: #EF3B3A;
+  text-decoration: none;
+}
+.forl .register-fornm {
+  display: none;
+}
+
+.containe {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.containe:before, .containe:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.containe .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.containe .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.containe .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.containe .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.containe .info span .fa {
+  color: #EF3B3A;
+}
+
+/* END Form */
+/* Demo Purposes */
+/* Formp */
+
+.formp {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 300px;
+  margin: 0 auto 100px;
+  padding: 30px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  text-align: center;
+}
+.formp .thumbnailp {
+  background: #3aef58;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 30px;
+  padding: 50px 30px;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  box-sizing: border-box;
+}
+.formp .thumbnailp img {
+  display: block;
+  width: 100%;
+}
+.formp input {
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.formp button {
   outline: 0;
   background: #3aef58;
   width: 100%;
@@ -58,50 +161,50 @@
   transition: all 0.3 ease;
   cursor: pointer;
 }
-.form .message {
+.formp .message {
   margin: 15px 0 0;
   color: #b3b3b3;
   font-size: 12px;
 }
-.form .message a {
+.formp .message a {
   color: #EF3B3A;
   text-decoration: none;
 }
-.form .register-form {
+.formp .registerp-formp {
   display: none;
 }
 
-.container {
+.containerp {
   position: relative;
   z-index: 1;
   max-width: 300px;
   margin: 0 auto;
 }
-.container:before, .container:after {
+.containerp:before, .containerp:after {
   content: "";
   display: block;
   clear: both;
 }
-.container .info {
+.containerp .info {
   margin: 50px auto;
   text-align: center;
 }
-.container .info h1 {
+.containerp .info h1 {
   margin: 0 0 15px;
   padding: 0;
   font-size: 36px;
   font-weight: 300;
   color: #1a1a1a;
 }
-.container .info span {
+.containerp .info span {
   color: #4d4d4d;
   font-size: 12px;
 }
-.container .info span a {
+.containerp .info span a {
   color: #000000;
   text-decoration: none;
 }
-.container .info span .fa {
+.containerp .info span .fa {
   color: #EF3B3A;
 }
 
@@ -229,6 +332,7 @@
 
 /* END Form */
 /* Demo Purposes */
+
 body {
   background: #ccc;
   font-family: "Roboto", sans-serif;
@@ -241,21 +345,9 @@ body:before {
   top: 0;
   left: 0;
   display: block;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0);
   width: 100%;
   height: 100%;
-}
-
-#video {
-  z-index: -99;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translateX(-50%) translateY(-50%);
 }
 
 .fornm {
