@@ -16,7 +16,7 @@
     <input type="text" classs = "fornm-control" id = "Nombre" @bind-value="Usuario.Nombre" placeholder ="Nombre"/>
     <input type="text" classs = "fornm-control"id ="Nombre" @bind-value="Usuario.Correo" placeholder ="Correo" />
     <input type="text" classs = "fornm-control"id ="Nombre" @bind-value="Usuario.Contrasena" placeholder ="contraseña" />
-    <button @onclick ="Crear">Registar</button>
+    <button onsubmit  ="Crear">Registar</button>
     <p class="message">Ya estas registrado? <a href="https://localhost:7275/login">Volver al Login</a></p>
   </form>
   </div>
