@@ -1,5 +1,4 @@
 @page "/dashboard"
-@using Data.Models
 
 <div class="containe">
   <div class="info">
@@ -8,7 +7,7 @@
     </div>
   </div>
 </div>
-<EditForm Model = "@Formulario" OnValidSubmit="Crear">
+<EditForm Model = "@Formulario">
 <div class="forl">
   <div class="login-form">
     
@@ -61,7 +60,7 @@
       </table>
       </table>
 
-    <button type="submit">Enviar</button>
+    <button @onclick="Crear">Enviar</button>
   </div>
 </div>
  </EditForm>
@@ -70,7 +69,8 @@
 
     async void Crear(){
     var r = await FormularioServices.Crear(Formulario);
-    if(r) Formulario = new Formulario ();
+    if(r) 
+    Formulario = new Formulario ();
     Console.WriteLine(r);
   }
 }
